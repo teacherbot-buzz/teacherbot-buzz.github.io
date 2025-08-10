@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            // Example: Sending a POST request using fetch
+            const url = 'https://animated-space-telegram-6qrgjqpvv9g2r96j-3000.app.github.dev//api'; // Example API endpoint
+            const data = {
+            title: 'foo',
+            body: 'bar',
+            userId: 1
+            };
+
+            fetch(url, {
+            method: 'POST', // HTTP method
+            headers: {
+                'Content-Type': 'application/json' // Specify JSON format
+            },
+            body: JSON.stringify(data) // Convert data to JSON string
+            })
+            .then(response => {
+                if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json(); // Parse JSON response
+            })
+            .then(result => {
+                console.log('Success:', result); // Handle success
+            })
+            .catch(error => {
+                console.error('Error:', error); // Handle errors
+            });
+        </script>
+    </head>
+    <body>
+        hi
+    </body>
+</html>
